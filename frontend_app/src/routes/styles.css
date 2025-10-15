@@ -1,37 +1,7 @@
-/**
- * Ultralight template styles - minimal and clean
- */
-
-.page-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 2rem;
+/* Page-level minor adjustments complementing global.css */
+h1, h2, h3 {
+  letter-spacing: -0.015em;
 }
-
-.main-title {
-  font-size: 3rem;
-  font-weight: 300;
-  text-align: center;
-  color: var(--primary-color);
-  margin: 0;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-@media (max-width: 768px) {
-  .main-title {
-    font-size: 2rem;
-  }
-  
-  .page-container {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .main-title {
-    font-size: 1.5rem;
-  }
-}
+h1 { font-size: 1.4rem; }
+h2 { font-size: 1.2rem; }
+h3 { font-size: 1.05rem; }

@@ -1,65 +1,48 @@
-# Qwik City App ⚡️
+# Ocean Notes (Qwik)
 
-- [Qwik Docs](https://qwik.dev/)
-- [Discord](https://qwik.dev/chat)
-- [Qwik GitHub](https://github.com/QwikDev/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+A personal notes manager built with Qwik and Qwik City. It provides basic CRUD for notes persisted in the browser using localStorage. Styled with the "Ocean Professional" theme.
 
----
+## Features
 
-## Project Structure
+- Notes list with title, last updated time, and content preview
+- Create, edit, delete notes
+- Client-side persistence via localStorage
+- Search/filter by title or content
+- Responsive layout with header, main content, and footer
+- Smooth transitions, subtle shadows, and rounded corners (Ocean Professional)
 
-This project is using Qwik with [QwikCity](https://qwik.dev/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
+## Routes
 
-Inside your project, you'll see the following directory structure:
-
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── routes/
-        └── ...
-```
-
-- `src/routes`: Provides the directory-based routing, which can include a hierarchy of `layout.tsx` layout files, and an `index.tsx` file as the page. Additionally, `index.ts` files are endpoints. Please see the [routing docs](https://qwik.dev/qwikcity/routing/overview/) for more info.
-
-- `src/components`: Recommended directory for components.
-
-- `public`: Any static assets, like images, can be placed in the public directory. Please see the [Vite public directory](https://vitejs.dev/guide/assets.html#the-public-directory) for more info.
-
-## Add Integrations and deployment
-
-Use the `npm run qwik add` command to add additional integrations. Some examples of integrations includes: Cloudflare, Netlify or Express Server, and the [Static Site Generator (SSG)](https://qwik.dev/qwikcity/guides/static-site-generation/).
-
-```shell
-npm run qwik add # or `yarn qwik add`
-```
+- `/` — Notes list with search
+- `/note/new` — Create a new note
+- `/note/[id]` — Edit an existing note
 
 ## Development
 
-Development mode uses [Vite's development server](https://vitejs.dev/). The `dev` command will server-side render (SSR) the output during development.
+- Start dev server on port 3000:
+  - `npm install`
+  - `npm start` (or `npm run dev`)
 
-```shell
-npm start # or `yarn start`
-```
+- Build:
+  - `npm run build`
 
-> Note: during dev mode, Vite may request a significant number of `.js` files. This does not represent a Qwik production build.
+- Preview production build:
+  - `npm run preview`
 
-## Preview
+## Accessibility
 
-The preview command will create a production build of the client modules, a production build of `src/entry.preview.tsx`, and run a local server. The preview server is only for convenience to preview a production build locally and should not be used as a production server.
+- Proper input labels
+- Focus states with visible focus ring
+- Keyboard shortcut: Ctrl/Cmd+S in the editor to save
 
-```shell
-npm run preview # or `yarn preview`
-```
+## Theme
 
-## Production
+- Colors:
+  - primary #2563EB
+  - secondary/success #F59E0B
+  - error #EF4444
+  - background #f9fafb
+  - surface #ffffff
+  - text #111827
 
-The production build will generate client and server modules by running both client and server build commands. The build command will use Typescript to run a type check on the source code.
-
-```shell
-npm run build # or `yarn build`
-```
+These are available as CSS variables in `src/global.css`.
